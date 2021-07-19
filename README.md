@@ -1,6 +1,6 @@
 # react-stripe-submenus
 
-Follow-along dropdown navigation inspired by the example on Stripe's website.
+Follow-along dropdown navigation inspired by the example on Stripe's website. The number of columns vary based on the number of items. On smaller screens, a single toggleable submenu is displayed instead.
 [Vanilla JS version](https://github.com/nataliecardot/dropdown-nav)
 
 To view, run `npm i && npm start` in downloaded project.
