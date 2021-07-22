@@ -10,20 +10,22 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="Stripe" />
-          <button className="btn toggle-btn" onClick={openSidebar}></button>
+          <button className="btn toggle-btn" onClick={openSidebar}>
+            <FaBars />
+          </button>
         </div>
         <ul className="nav-links">
           <li>
-            <button className="link-btn">products</button>
+            <button className="link-btn">Products</button>
           </li>
           <li>
-            <button className="link-btn">developers</button>
+            <button className="link-btn">Developers</button>
           </li>
           <li>
-            <button className="link-btn">company</button>
+            <button className="link-btn">Company</button>
           </li>
         </ul>
-        <button className="btn signin-btn">Sign in</button>
+        <button className="btn signin-btn">Sign In</button>
       </div>
     </nav>
   );
