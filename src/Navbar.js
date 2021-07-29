@@ -7,8 +7,14 @@ const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
 
   const displaySubmenu = (e) => {
-    console.log('Hello world');
-    openSubmenu();
+    // link text of menu button that's being hovered
+    const page = e.target.textContent;
+    // Get button location so submenu can be centered below it
+    const tempBtn = e.target.getBoundingClientRect();
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    // Subtracting 3 to move submenu 3px up
+    const bottom = tempBottom - 3;
+    openSubmenu(page, { center, bottom });
   };
 
   return (
