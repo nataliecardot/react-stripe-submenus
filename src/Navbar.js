@@ -13,7 +13,7 @@ const Navbar = () => {
     const tempBtn = e.target.getBoundingClientRect();
     const center = (tempBtn.left + tempBtn.right) / 2;
     // Subtracting 3 to move submenu 3px up
-    const bottom = tempBottom - 3;
+    const bottom = tempBtn.bottom - 3;
     openSubmenu(page, { center, bottom });
   };
 
