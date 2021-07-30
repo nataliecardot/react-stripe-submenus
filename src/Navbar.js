@@ -9,10 +9,10 @@ const Navbar = () => {
   const displaySubmenu = (e) => {
     // link text of menu button that's being hovered
     const page = e.target.textContent;
-    // Get button location so submenu can be centered below it
+    // get button location so submenu can be centered below it
     const tempBtn = e.target.getBoundingClientRect();
     const center = (tempBtn.left + tempBtn.right) / 2;
-    // Subtracting 3 to move submenu 3px up
+    // subtracting 3 to move submenu 3px up
     const bottom = tempBtn.bottom - 3;
     openSubmenu(page, { center, bottom });
   };
