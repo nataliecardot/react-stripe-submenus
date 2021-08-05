@@ -12,13 +12,16 @@ const Navbar = () => {
     // get button location so submenu can be centered below it
     const tempBtn = e.target.getBoundingClientRect();
     const center = (tempBtn.left + tempBtn.right) / 2;
-    // subtracting 3 to move submenu 3px up
-    const bottom = tempBtn.bottom - 3;
+    const bottom = tempBtn.bottom;
     openSubmenu(page, { center, bottom });
   };
 
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains('link-btn')) closeSubmenu();
+  };
+
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="Stripe" />
