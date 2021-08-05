@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import sublinks from './data';
 
+// provides two components, provider (AppContext.Provider below) and consumer; only using provider
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
