@@ -24,9 +24,7 @@ const AppProvider = ({ children }) => {
     setIsSubmenuOpen(true);
   };
 
-  const closeSubmenu = () => {
-    setIsSubmenuOpen(false);
-  };
+  const closeSubmenu = () => setIsSubmenuOpen(false);
 
   return (
     <AppContext.Provider
@@ -46,8 +44,6 @@ const AppProvider = ({ children }) => {
   );
 };
 
-export const useGlobalContext = () => {
-  return useContext(AppContext);
-};
+const useGlobalContext = () => useContext(AppContext);
 
-export { AppContext, AppProvider };
+export { AppContext, AppProvider, useGlobalContext };
